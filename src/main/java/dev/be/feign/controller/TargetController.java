@@ -1,5 +1,7 @@
 package dev.be.feign.controller;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,4 +39,10 @@ public class TargetController {
                 .age(body.getAge())
                 .build();
     }
+
+    @GetMapping("/errorDecoder")
+    public ResponseEntity<BaseResponseInfo> testErrorDecoder() {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    }
+
 }
