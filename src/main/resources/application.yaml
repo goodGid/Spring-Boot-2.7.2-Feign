@@ -10,4 +10,4 @@ feign:
       demo-client: # DemoFeignClient에서 사용할 Client 설정 값
         connectTimeout: 1000
         readTimeout: 10000
-        loggerLevel: BASIC
+        loggerLevel: BASIC # 여기서 설정한 값은 FeignCustomLogger -> Logger.Level logLevel 변수에 할당됨
