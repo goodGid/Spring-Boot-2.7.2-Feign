@@ -1,6 +1,5 @@
 package dev.be.feign.config;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,7 +10,7 @@ import feign.Logger;
 public class FeignConfig {
 
     @Bean
-    public Logger feignLogger(ApplicationContext applicationContext) {
-        return new FeignCustomLogger(applicationContext);
+    public Logger feignLogger() {
+        return new FeignCustomLogger();
     }
 }
